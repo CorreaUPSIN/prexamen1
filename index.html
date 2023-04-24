@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticion usando Axios</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .window {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 600px;
+        }
+        .window h1 {
+            font-size: 24px;
+        }
+
+        .window h2 {
+            font-size: 18px;
+        }
+
+        .window h3 {
+            font-size: 16px;
+        }
+
+        .window input {
+            margin-bottom: 10px;
+        }
+
+        .window .form-group {
+            margin-bottom: 20px;
+        }
+
+        .window #idSeleccionado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <h1 class="text-center">Pre Examen I</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Vendedores</h2>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="inputBuscar">Buscar ID</label>
+                    <input id="inputBuscar" class="form-control" type="number" min="1" max="10">
+                </div>
+                <div class="form-group">
+                    <button id="btnBuscar" class="btn btn-primary">Cargar Datos</button>
+                    <button id="btnLimpiar" class="btn btn-default">Limpiar</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 id="idSeleccionado">ID: </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Nombre:</h3>
+                <div class="form-group">
+                    <input id="inputNombre" class="form-control" type="text" readonly>
+                </div>
+                <h3>Nombre de Usuario:</h3>
+                <div class="form-group">
+                    <input id="inputNombreUsuario" class="form-control" type="text" readonly>
+                </div>
+                <h3>Email:</h3>
+                <div class="form-group">
+                    <input id="inputEmail" class="form-control" type="text" readonly>
+                </div>
+                <h2>Domicilio:</h2>
+                <h3>Calle:</h3><input id="inputCalle" class="form-control" type="text" readonly>
+                <h3>Numero:</h3><input id="inputNumero" class="form-control" type="text" readonly>
+                <h3>Ciudad:</h3><input id="inputCiudad" class="form-control" type="text" readonly>
+
+                </div>
+            </div>
+            </div>
+        <div id="respuesta"></div>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
